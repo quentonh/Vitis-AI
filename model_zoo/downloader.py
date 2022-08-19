@@ -117,28 +117,28 @@ def download(loadLinkList):
         print(name)
         urllib.request.urlretrieve(load_Link, name,Schedule)
         print()
-    print("done")
+    print("Download complete")
 
 def main():
     print('Tip:')
-    print("you need to input framework and model name, use space divide such as tf vgg16")
+    print("Please input the target framework and model name, using the space character as a separator.  Example: downloader.py tf vgg16")
     print("tf:tensorflow1.x  tf2:tensorflow2.x  cf:caffe  dk:darknet  pt:pytorch  all: list all model")
     framework_list=['tf','tf2','cf','dk','pt','torchvision','all']
     keyword=list(input("input:").casefold().split())
     if keyword[0] not in framework_list:
-        print("Please use correct framework keyword and framework ahead of model name")
+        print("Invalid framework!  Please input a valid framework keyword (tf,tf2,cf,dk,pt,torchvision,all) preceeding the model name.  Example: downloader.py tf vgg16")
         return 0
     model_list=find_Filename(keyword)
     yamlPathList=[]
     if len(model_list)==0:
-        print("None")
+        print("No model matching that description found for framework specified.")
         return 0
     elif len(model_list)==1:
         yamlPath=listpath+"/"+model_list[0]+"/model.yaml"
         yamlPathList.append(yamlPath)
     else:
         #chose model
-        print("chose model")
+        print("Input the number of the model you wish to download")
         print(0,":",'all')
         for i,model in enumerate(model_list):
             print(i+1,":",model)
