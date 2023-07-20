@@ -317,18 +317,18 @@ floating-point model as an input and performs pre-processing (folds batchnorms a
 	[Host] $ mkdir -p resnet18/model
 	
 
-2. Download the `ImageNet 1000 (mini) <https://www.kaggle.com/datasets/ifigotin/imagenetmini-1000/download?datasetVersionNumber=1>`__ dataset from Kaggle. This dataset is subset of the ILSVRC 2012-2017 dataset and comprises 1000 object classes, and contains 1,281,167 training, 50,000 validation, and 100,000 test images.  You will need to create a Kaggle account to access this dataset.  Move the downloaded Archive.zip file into the created /Vitis-AI/resnet18 folder and unzip the dataset.
+2. Download the `ImageNet 1000 (mini) <https://www.kaggle.com/datasets/ifigotin/imagenetmini-1000/download?datasetVersionNumber=1>`__ dataset from Kaggle. This dataset is subset of the ILSVRC 2012-2017 dataset and comprises 1000 object classes, and contains 1,281,167 training, 50,000 validation, and 100,000 test images.  You will need to create a Kaggle account to access this dataset.  Move the downloaded archive.zip file into the created /Vitis-AI/resnet18 folder and unzip the dataset.
 
 .. code-block:: Bash
 
 	[Host] $ cd resnet18
-	[Host] $ unzip Archive.zip
+	[Host] $ unzip archive.zip
 	
 - Your workspace directory should reflect the following: 
 
 ::
 
-	├── Archive.zip
+	├── archive.zip
 	│
 	├── model    
 	│                                    
@@ -374,7 +374,7 @@ floating-point model as an input and performs pre-processing (folds batchnorms a
 
 ::
 
-	├── Archive.zip
+	├── archive.zip
 	│
 	├── model 
 	│   └── resnet18.pth             # ResNet18 floating point model downloaded from PyTorch.
